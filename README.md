@@ -15,7 +15,7 @@ This repo demonstrates the following features:
 * Perform docker build and push image to Amazon EC/2 Container Registry (Amazon ECR)
 * Automatically deploy image to TEST environment 
 * Manually deploy image to PROD environment 
-* Automatically register Amazon ECS load balancers for each environment  
+* Automatically register Amazon ECS application load balancer for each environment  
 
 ## Run CI for this repo on Shippable
 * Fork this repo into your source code account (e.g. GitHub)
@@ -44,3 +44,6 @@ Your end-to-end pipeline is complete! Now, any change you make to the applicatio
 
 ### CD pipeline  screenshot
 ![CD Pipeline](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-CD.png)
+
+### Set up an Amazon ECS cluster
+See the Amazon ECS documentation to [set up an Amazon ECS cluster](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/create_cluster.html)
