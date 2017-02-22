@@ -15,7 +15,7 @@ This repo demonstrates the following features:
 * Perform docker build and push image to Amazon EC/2 Container Registry (Amazon ECR)
 * Automatically deploy image to TEST environment 
 * Manually deploy image to PROD environment 
-* Automatically register Amazon ECS application load balancer for each environment  
+* Automatically register Amazon ECS services with application load balancer (ALB) for each environment  
 
 ## Run CI for this repo on Shippable
 * Fork this repo into your source code account (e.g. GitHub)
