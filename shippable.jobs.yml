@@ -1,0 +1,50 @@
+jobs:
+
+# jobs for this shippableSamples demo 
+
+################################
+
+# runCI job that builds and pushes artifact to Amazon ECR
+  - name: node-ecr-deploy-ecs-loadbalancer_runCI
+    type: runCI
+    steps:
+      - OUT: shipdemo-img-ecs
+    flags:
+      - amazon-ecr-ecs-loadbalancer
+  
+# generate manifest
+  - name: shipdemo-manifest-ecs
+    type: manifest
+    steps:
+      - IN: shipdemo-img-ecs
+      - IN: shipdemo-img-options-ecs-test
+      - TASK: managed
+    flags:
+      - amazon-ecr-ecs-loadbalancer
+
+# TEST deployment to Amazon ECS
+  - name: shipdemo-deploy-ecs-test
+    type: deploy
+    steps:
+      - IN: shipdemo-manifest-ecs
+      - IN: shipdemo-params-ecs-test
+      - IN: shipdemo-cluster-ecs
+      - IN: shipdemo-alb-test
+      - TASK: managed
+    flags:
+      - amazon-ecr-ecs-loadbalancer
+
+# PROD deployment to Amazon ECS
+  - name: shipdemo-deploy-ecs-prod
+    type: deploy
+    steps:
+      - IN: shipdemo-deploy-ecs-test
+        switch: off
+      - IN: shipdemo-params-ecs-prod
+      - IN: shipdemo-img-options-ecs-prod
+      - IN: shipdemo-replicas-ecs-prod
+      - IN: shipdemo-cluster-ecs
+      - IN: shipdemo-alb-prod
+      - TASK: managed
+    flags:
+      - amazon-ecr-ecs-loadbalancer
