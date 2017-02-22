@@ -26,7 +26,6 @@ This repo demonstrates the following features:
 ## Add Continuous Delivery pipelines to deploy to Amazon ECS
 * Create an integration for [Amazon ECS](http://docs.shippable.com/integrations/containerServices/ecs/)
 * All pipeline config is in `shippable.resources.yml` and `shippable.jobs.yml`. Check these files and update config wherever the comment asks you to replace with your specific values
-* Follow instructions to add your [Continuous Deployment pipeline](http://docs.shippable.com/tutorials/pipelines/howToAddSyncRepos/)
 * Right-click on the deploy job in the SPOG view named 'shipdemo-deploy-ecs-test' and run the job
   * This demo uses a declarative job type called 'deploy' in Shippable - [learn how moe about 'deploy' jobs](http://docs.shippable.com/pipelines/jobs/deploy/) 
 * Your app should be deployed to your Amazon ECS cluster labeled as your TEST environment
