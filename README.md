@@ -40,7 +40,7 @@ Your end-to-end pipeline is complete! Now, any change you make to the applicatio
 ![CI Console Log](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-CI.png)
 
 ### Amazon ECR integration screenshot
-![Integration View](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-Amazon ECR.png)
+![Integration View](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-ECR.png)
 
 ### CD pipeline  screenshot
 ![CD Pipeline](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-CD.png)
