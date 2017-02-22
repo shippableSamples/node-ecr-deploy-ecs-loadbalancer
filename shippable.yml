@@ -35,7 +35,8 @@ build:
     - docker push $DOCKER_ACC/$DOCKER_REPO:$BRANCH.$BUILD_NUMBER
 
   on_success:
-    - echo versionName=$BRANCH.$BUILD_NUMBER > /build/state/shipdemo-img.env
+    # save the new image state for use later in the pipeline
+    - echo versionName=$BRANCH.$BUILD_NUMBER > /build/state/shipdemo-img-ecs.env
 
 # Integrations are used to connect external resources to CI
 # http://docs.shippable.com/integrations/overview/
