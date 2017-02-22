@@ -57,8 +57,7 @@ resources:
       memory: 64
       cpuShares: 128
       portMappings:
-        - 80:80
-      publishAllPorts : true
+        - 0:80
       labels:   
         app: shipdemo-node-ecr-deploy-ecs-loadbalancer
         env: test
@@ -95,6 +94,8 @@ resources:
     version:
       memory: 64
       cpuShares: 128
+      portMappings:
+        - 0:80
       labels: 
         app: shipdemo-node-ecr-deploy-ecs-loadbalancer
         env: prod
