@@ -39,7 +39,7 @@ resources:
     integration: ttrahan-ecr # replace with your Amazon ECR integration name
     pointer:
       # replace with your Amazon ECR URL
-      sourceName: "288971733297.dkr.ecr.us-east-1.amazonaws.com/node-ecr-deploy-ecs" 
+      sourceName: "288971733297.dkr.ecr.us-east-1.amazonaws.com/node-ecr-deploy-ecs-loadbalancer" 
       isPull: false
     seed:
       versionName: master.1
