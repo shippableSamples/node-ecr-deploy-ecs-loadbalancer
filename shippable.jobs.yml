@@ -30,6 +30,10 @@ jobs:
       - IN: shipdemo-params-ecs-test
       - IN: shipdemo-cluster-ecs
       - IN: shipdemo-alb-test
+        applyTo:
+          - manifest: shipdemo-manifest-ecs
+            image: shipdemo-img-ecs
+            port: 80
       - TASK: managed
     flags:
       - amazon-ecr-ecs-loadbalancer
@@ -45,6 +49,10 @@ jobs:
       - IN: shipdemo-replicas-ecs-prod
       - IN: shipdemo-cluster-ecs
       - IN: shipdemo-alb-prod
+        applyTo:
+          - manifest: shipdemo-manifest-ecs
+            image: shipdemo-img-ecs
+            port: 80
       - TASK: managed
     flags:
       - amazon-ecr-ecs-loadbalancer
