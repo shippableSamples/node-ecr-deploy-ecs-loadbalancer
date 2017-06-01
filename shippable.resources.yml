@@ -74,13 +74,13 @@ resources:
 
 ################################
 
-# # set service version seed
-#   - name: shipdemo-version-ecs
-#     type: version
-#     seed:
-#       versionName: "1.0.0"
-#     flags:
-#       - amazon-ecr-ecs-loadbalancer
+# set service version seed
+  - name: shipdemo-version-ecs
+    type: version
+    seed:
+      versionName: "1.0.0"
+    flags:
+      - amazon-ecr-ecs-loadbalancer
 
 ################################
 
