@@ -37,7 +37,7 @@ jobs:
   - name: shipdemo-deploy-ecs-test
     type: deploy
     steps:
-      - IN: shipdemo-manifest-ecs
+      - IN: shipdemo-release-ecs-beta
       - IN: shipdemo-params-ecs-test
       - IN: shipdemo-cluster-ecs
       - IN: shipdemo-alb-test
@@ -67,7 +67,7 @@ jobs:
     steps:
       # - IN: shipdemo-deploy-ecs-test
       #   switch: off
-      - IN: shipdemo-release-ecs
+      - IN: shipdemo-release-ecs-prod
         switch: off
       - IN: shipdemo-params-ecs-prod
       - IN: shipdemo-img-options-ecs-prod
