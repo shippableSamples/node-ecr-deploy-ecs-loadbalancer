@@ -23,7 +23,7 @@ jobs:
       - amazon-ecr-ecs-loadbalancer
 
 # Create TEST Release
-  - name: shipdemo-release-ecs
+  - name: shipdemo-release-ecs-beta
     type: release
     steps:
       - IN: shipdemo-manifest-ecs
@@ -50,7 +50,7 @@ jobs:
       - amazon-ecr-ecs-loadbalancer
 
 # Create PROD Release
-  - name: shipdemo-release-ecs
+  - name: shipdemo-release-ecs-prod
     type: release
     steps:
       - IN: shipdemo-deploy-ecs-test
