@@ -22,6 +22,17 @@ jobs:
     flags:
       - amazon-ecr-ecs-loadbalancer
 
+# Create TEST Release
+  - name: shipdemo-release-ecs
+    type: release
+    steps:
+      - IN: shipdemo-manifest-ecs
+      - IN: shipdemo-version-ecs
+      - TASK: managed
+        bump: beta
+    flags:
+      - amazon-ecr-ecs-loadbalancer
+
 # TEST deployment to Amazon ECS
   - name: shipdemo-deploy-ecs-test
     type: deploy
@@ -38,16 +49,15 @@ jobs:
     flags:
       - amazon-ecr-ecs-loadbalancer
 
-# Create Release
+# Create PROD Release
   - name: shipdemo-release-ecs
     type: release
     steps:
       - IN: shipdemo-deploy-ecs-test
         switch: off
-      - IN: shipdemo-version-ecs
+      # - IN: shipdemo-version-ecs
       - TASK: managed
-        bump: beta
-        # bump: final
+        bump: final
     flags:
       - amazon-ecr-ecs-loadbalancer
 
