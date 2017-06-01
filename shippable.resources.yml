@@ -4,8 +4,6 @@ resources:
 
 ################################
 
-# add infrastructure resources
-
 # add env - AWS cluster
   - name: shipdemo-cluster-ecs
     type: cluster
