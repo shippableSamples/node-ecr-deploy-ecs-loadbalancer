@@ -46,7 +46,7 @@ jobs:
         switch: off
       - IN: shipdemo-version-ecs
       - TASK: managed
-        bump: patch
+        bump: beta
     flags:
       - amazon-ecr-ecs-loadbalancer
 
