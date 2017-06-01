@@ -57,7 +57,7 @@ jobs:
     steps:
       # - IN: shipdemo-deploy-ecs-test
       #   switch: off
-      - IN: shipdemo-release-ecs-prod
+      - IN: shipdemo-release-ecs
         switch: off
       - IN: shipdemo-params-ecs-prod
       - IN: shipdemo-img-options-ecs-prod
