@@ -78,7 +78,7 @@ resources:
   - name: shipdemo-version-ecs
     type: version
     seed:
-      versionName: "1.0.0"
+      versionName: "1.1.0"
     flags:
       - amazon-ecr-ecs-loadbalancer
 
