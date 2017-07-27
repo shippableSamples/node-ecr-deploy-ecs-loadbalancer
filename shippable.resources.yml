@@ -12,6 +12,8 @@ resources:
       # replace with your Amazon ECS cluster name and region
       sourceName : "demo-shippable-ecs-test"
       region: "us-east-1"
+    flags:
+      - amazon-ecr-ecs-loadbalancer
 
 # add AWS ALB target group for TEST
   - name: shipdemo-alb-test     #required
@@ -20,6 +22,8 @@ resources:
       # replace with the ARN for your Amazon EC/2 Application Load Balancer Target Group
       sourceName: "arn:aws:elasticloadbalancing:us-east-1:288971733297:targetgroup/demoWebTest/56a74253de7101ee"
       method: application
+    flags:
+      - amazon-ecr-ecs-loadbalancer
 
 # add AWS ALB target group for PROD
   - name: shipdemo-alb-prod     #required
@@ -28,6 +32,8 @@ resources:
       # replace with the ARN for your Amazon EC/2 Application Load Balancer Target Group
       sourceName: "arn:aws:elasticloadbalancing:us-east-1:288971733297:targetgroup/demoWeb/29435cb0f31ac400"
       method: application
+    flags:
+      - amazon-ecr-ecs-loadbalancer
 
 ################################
 
